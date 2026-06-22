@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopFlowPOS – Pakistan Ka Sab Se Professional Mobile Shop System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F67280',
+                        secondary: '#C06C84',
+                        accent: '#6C5B7B',
+                        success: '#00C9A7',
+                        surface: {
+                            light: '#FFFFFF',
+                            dark: '#0D0A1F',
+                            darker: '#080516'
+                        }
+                    },
+                    fontFamily: {
+                        head: ['Syne', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .hero-glow { position: absolute; width: 40vw; height: 40vw; background: radial-gradient(circle, rgba(246, 114, 128, 0.1) 0%, transparent 70%); filter: blur(80px); z-index: -1; }
+        .gradient-text { background: linear-gradient(135deg, #F67280 0%, #C06C84 50%, #FFB800 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .mockup-desktop { border: 10px solid #1c2340; border-radius: 20px; box-shadow: 0 40px 80px -15px rgba(0,0,0,0.7); }
+        .mockup-phone { border: 8px solid #1c2340; border-radius: 32px; box-shadow: 0 25px 50px -10px rgba(0,0,0,0.8); }
+        .card-hover:hover { transform: translateY(-8px); border-color: #F67280; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #080516; }
+        ::-webkit-scrollbar-thumb { background: #1c2340; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #F67280; }
+        .urdu-text { direction: rtl; }
+        .feature-grid-icon { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+    </style>
+</head>
+<body class="bg-surface-darker text-white overflow-x-hidden selection:bg-primary/30">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-[100] transition-all duration-300 py-4" id="navbar">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between glass rounded-2xl px-6 py-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center rotate-6 shadow-lg shadow-primary/20">
+                        <i data-lucide="layout-dashboard" class="text-white w-5 h-5"></i>
+                    </div>
+                    <span class="font-head font-extrabold text-xl tracking-tighter">ShopFlow<span class="text-primary">POS</span></span>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold opacity-70">
+                    <a href="#hero" class="hover:text-primary transition">Home</a>
+                    <a href="#features-grid" class="hover:text-primary transition">Features</a>
+                    <a href="#pricing" class="hover:text-primary transition">Pricing</a>
+                    <a href="#showcase" class="hover:text-primary transition">Screenshots</a>
+                    <a href="#contact" class="hover:text-primary transition">Contact</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a href="#contact" class="bg-primary hover:bg-secondary px-5 py-2 rounded-xl text-white font-bold text-sm transition shadow-xl shadow-primary/20">
+                        Book Free Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-40 pb-20 px-6">
+        <div class="hero-glow top-0 left-0"></div>
+        <div class="hero-glow bottom-0 right-0"></div>
+
+        <div class="max-w-6xl mx-auto text-center relative">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-8" data-aos="fade-down">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="text-[10px] font-bold uppercase tracking-widest opacity-80">Pakistan's #1 Retail Solution</span>
+            </div>
+
+            <div class="mb-4 urdu-text text-2xl md:text-4xl font-bold text-primary/90 leading-tight" data-aos="fade-up">
+                اپنی موبائل شاپ کا مکمل نظام — اب آپ کے قابو میں
+            </div>
+
+            <h1 class="font-head text-5xl lg:text-7xl font-black mb-8 tracking-tighter leading-[1.05]" data-aos="fade-up" data-aos-delay="100">
+                Total Control of Your <br>
+                <span class="gradient-text">Retail Empire.</span>
+            </h1>
+
+            <p class="text-lg opacity-60 mb-10 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                The most comprehensive POS system specifically engineered for Pakistan's mobile market.
+                IMEI Tracking, BC Committee, Kist Installments, and Repairs — all synced across Android and Windows.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-20" data-aos="fade-up" data-aos-delay="300">
+                <a href="#" class="bg-primary hover:scale-105 px-8 py-4 rounded-xl text-white font-bold transition-all shadow-xl shadow-primary/40 flex items-center justify-center gap-3">
+                    <i data-lucide="play" class="fill-current w-5 h-5"></i>
+                    <div class="text-left">
+                        <div class="text-[9px] uppercase opacity-70">Download for</div>
+                        <div class="text-lg">Android</div>
+                    </div>
+                </a>
+                <a href="https://github.com/YOUR_GITHUB_USERNAME/shopFlowPOS-web/releases/latest/download/ShopFlowPOS.msi" class="glass hover:bg-white/5 hover:scale-105 px-8 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-3">
+                    <i data-lucide="monitor" class="w-6 h-6 text-primary"></i>
+                    <div class="text-left">
+                        <div class="text-[9px] uppercase opacity-70">Download for</div>
+                        <div class="text-xl">Windows PC</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Main Device Mockup -->
+            <div class="relative max-w-5xl mx-auto" data-aos="zoom-in" data-aos-delay="400">
+                <div class="mockup-desktop bg-surface-dark overflow-hidden transform -rotate-1">
+                    <img src="screenshots/desktop/dashboard.jpg" alt="Windows Dashboard" class="w-full">
+                </div>
+                <div class="mockup-phone absolute -bottom-8 -right-4 md:-right-8 w-40 md:w-60 bg-surface-darker overflow-hidden transform rotate-3">
+                    <img src="screenshots/Android/dashboard_dark.jpg" alt="Android App" class="w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE FEATURES GRID (RE-INTRODUCED) -->
+    <section id="features-grid" class="py-24 px-6 bg-surface-dark/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-primary font-bold tracking-[0.4em] text-[10px] uppercase mb-4 block">15+ Integrated Modules</span>
+                <h2 class="font-head text-4xl lg:text-6xl font-black mb-6">Built for <span class="text-primary">Everything.</span></h2>
+                <p class="opacity-50 max-w-2xl mx-auto text-base">A truly comprehensive toolset covering every aspect of modern mobile retail.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- POS -->
+                <div class="glass p-8 rounded-3xl card-hover transition-all" data-aos="fade-up">
+                    <div class="feature-grid-icon bg-primary/10 text-primary"><i data-lucide="zap"></i></div>
+                    <h3 class="text-lg font-bold mb-3">Next-Gen POS</h3>
+                    <p class="text-xs opacity-50 leading-relaxed">Lightning-fast checkout with barcode scanning, thermal printing, and multi-payment support.</p>
+                </div>
+                <!-- BC Manager -->
+                <div class="glass p-8 rounded-3xl card-hover transition-all" data-aos="fade-up" data-aos-delay="50">
+                    <div class="feature-grid-icon bg-purple-400/10 text-purple-400"><i data-lucide="users-2"></i></div>
+                    <h3 class="text-lg font-bold mb-3">BC Manager</h3>
+                    <p class="text-xs opacity-50 leading-relaxed">Pakistan's local committee system digitized. Track monthly dues and automate lucky draws.</p>
+                </div>
+                <!-- Ledger -->
+                <div class="glass p-8 rounded-3xl card-hover transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-grid-icon bg-green-400/10 text-green-400"><i data-lucide="book-open"></i></div>
+                    <h3 class="text-lg font-bold mb-3">Full Ledger</h3>
+                    <p class="text-xs opacity-50 leading-relaxed">Professional double-entry accounting. Bridging cash-in-hand with bank and supplier balances.</p>
+                </div>
+                <!-- IMEI Inventory -->
+                <div class="glass p-8 rounded-3xl card-hover transition-all" data-aos="fade-up" data-aos-delay="150">
+                    <div class="feature-grid-icon bg-blue-400/10 text-blue-400"><i data-lucide="scan-barcode"></i></div>
+                    <h3 class="text-lg font-bold mb-3">IMEI Tracking</h3>
+                    <p class="text-xs opacity-50 leading-relaxed">Trace every device from purchase to sale. Perfect for auditing and FBR compliance.</p>
+                </div>
+                <!-- Day-End -->
+                <div class="glass p-8 rounded-3xl card-hover transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-grid-icon bg-orange-400/10 text-orange-400"><i data-lucide="calendar-check"></i></div>
+                    <h3 class="text-lg font-bold mb-3">Day-End Closing</h3>
+                    <p class="text-xs opacity-50 leading-relaxed">Close your business day with automated cash reconciliation and shift summaries.</p>
+                </div>
+                <!-- Repairs -->
+                <div class="glass p-8 rounded-3xl card-hover transition-all" data-aos="fade-up" data-aos-delay="250">
+                    <div class="feature-grid-icon bg-rose-400/10 text-rose-400"><i data-lucide="wrench"></i></div>
+                    <h3 class="text-lg font-bold mb-3">Repair Station</h3>
+                    <p class="text-xs opacity-50 leading-relaxed">Manage repair jobs with professional job cards, parts tracking, and technician labor billing.</p>
+                </div>
+                <!-- Installments -->
+                <div class="glass p-8 rounded-3xl card-hover transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-grid-icon bg-yellow-400/10 text-yellow-400"><i data-lucide="credit-card"></i></div>
+                    <h3 class="text-lg font-bold mb-3">Installment Plans</h3>
+                    <p class="text-xs opacity-50 leading-relaxed">Sell high-value items on monthly recovery plans with automated WhatsApp reminders.</p>
+                </div>
+                <!-- Backup -->
+                <div class="glass p-8 rounded-3xl card-hover transition-all" data-aos="fade-up" data-aos-delay="350">
+                    <div class="feature-grid-icon bg-sky-400/10 text-sky-400"><i data-lucide="cloud-lightning"></i></div>
+                    <h3 class="text-lg font-bold mb-3">Cloud Sync</h3>
+                    <p class="text-xs opacity-50 leading-relaxed">Encrypted Google Drive backups. Sync your data seamlessly between Android and Windows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIFETIME PRICING SECTION -->
+    <section id="pricing" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="bg-gradient-to-br from-primary/10 via-surface-dark to-accent/10 rounded-[3rem] p-10 md:p-16 text-center border border-white/5 relative overflow-hidden" data-aos="fade-up">
+                <h2 class="font-head text-3xl md:text-5xl font-black mb-6">Invest Once. <span class="text-primary">Grow Forever.</span></h2>
+                <p class="text-lg opacity-60 max-w-xl mx-auto mb-10 leading-relaxed">Stop paying monthly subscriptions. Buy the license once and enjoy lifetime updates and support.</p>
+
+                <div class="flex flex-col md:flex-row items-center justify-center gap-10 mb-12">
+                    <div class="p-6 glass rounded-2xl min-w-[260px]">
+                        <div class="text-[10px] uppercase tracking-widest opacity-50 mb-2">Lifetime License</div>
+                        <div class="text-5xl font-black tracking-tighter text-primary mb-2">RS 35,000</div>
+                        <div class="text-[10px] opacity-40 italic">One-time payment. No hidden fees.</div>
+                    </div>
+                    <ul class="text-left space-y-3 text-sm font-medium">
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-success w-5 h-5 bg-success/10 rounded-full p-1"></i> Lifetime Access to all modules</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-success w-5 h-5 bg-success/10 rounded-full p-1"></i> Free Future Updates forever</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-success w-5 h-5 bg-success/10 rounded-full p-1"></i> Android + Windows Sync</li>
+                    </ul>
+                </div>
+
+                <a href="#contact" class="bg-primary hover:bg-secondary px-12 py-5 rounded-xl text-white font-black text-xl transition-all shadow-xl shadow-primary/40 transform hover:-translate-y-1 inline-block">
+                    Claim Your License Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILED MODULE SHOWCASE (MATCHED SCREENSHOTS) -->
+    <section id="showcase" class="py-24 px-6 space-y-32">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- POS -->
+            <div class="flex flex-col lg:flex-row items-center gap-16" data-aos="fade-right">
+                <div class="lg:w-1/2">
+                    <span class="text-primary font-bold text-[10px] tracking-widest uppercase mb-4 block">Sales Engine</span>
+                    <h3 class="font-head text-3xl md:text-4xl font-bold mb-6">Point of Sale (POS)</h3>
+                    <p class="opacity-50 text-base mb-8 leading-relaxed">Lightning-fast billing system. Supports thermal printing, barcode scanning, and multi-payment reconciliation (Cash, Bank, Credit) in a single workflow. Mobile-optimized for shop floor sales.</p>
+                    <div class="flex gap-4">
+                        <div class="p-4 glass rounded-xl"><div class="font-black text-lg text-primary">Fast</div><div class="text-[10px] opacity-40">Checkout</div></div>
+                        <div class="p-4 glass rounded-xl"><div class="font-black text-lg text-success">80mm</div><div class="text-[10px] opacity-40">Thermal</div></div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 flex gap-4">
+                    <img src="screenshots/Android/pos_dark.jpg" alt="Android POS" class="w-1/2 rounded-2xl mockup-phone border-2 border-white/5">
+                    <img src="screenshots/desktop/pos.jpg" alt="Desktop POS" class="w-1/2 rounded-2xl mockup-desktop border-2 border-white/5">
+                </div>
+            </div>
+
+            <!-- Inventory & Stock Audit -->
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16" data-aos="fade-left">
+                <div class="lg:w-1/2">
+                    <span class="text-blue-400 font-bold text-[10px] tracking-widest uppercase mb-4 block">Inventory Control</span>
+                    <h3 class="font-head text-3xl md:text-4xl font-bold mb-6">IMEI Genealogy & Stock</h3>
+                    <p class="opacity-50 text-base mb-8 leading-relaxed">Trace every device by its unique IMEI. Know exactly when it was bought, from whom, and to whom it was sold. Perform real-time stock audits on your phone to keep inventory 100% accurate.</p>
+                </div>
+                <div class="lg:w-1/2 flex gap-4">
+                    <img src="screenshots/Android/stock_audit_dark.jpg" alt="Stock Audit" class="w-1/2 rounded-2xl mockup-phone border-2 border-white/5">
+                    <img src="screenshots/Android/purchase_dark.jpg" alt="Purchase History" class="w-1/2 rounded-2xl mockup-phone border-2 border-white/5">
+                </div>
+            </div>
+
+            <!-- Committee & Installments -->
+            <div class="flex flex-col lg:flex-row items-center gap-16" data-aos="fade-right">
+                <div class="lg:w-1/2">
+                    <span class="text-purple-400 font-bold text-[10px] tracking-widest uppercase mb-4 block">Finance Modules</span>
+                    <h3 class="font-head text-3xl md:text-4xl font-bold mb-6">BC & Kist Manager</h3>
+                    <p class="opacity-50 text-base mb-8 leading-relaxed">Automate "Committees" and Installment sales. View payment grids, track monthly dues, and send automated reminders. Designed specifically for the Pakistani retail financial model.</p>
+                </div>
+                <div class="lg:w-1/2 flex gap-4">
+                    <img src="screenshots/Android/comittee_dark.jpg" alt="Committee" class="w-1/2 rounded-2xl mockup-phone border-2 border-white/5">
+                    <img src="screenshots/Android/installments_dark.jpg" alt="Installments" class="w-1/2 rounded-2xl mockup-phone border-2 border-white/5">
+                </div>
+            </div>
+
+            <!-- Accounting & Reports -->
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16" data-aos="fade-left">
+                <div class="lg:w-1/2">
+                    <span class="text-success font-bold text-[10px] tracking-widest uppercase mb-4 block">Deep Analytics</span>
+                    <h3 class="font-head text-3xl md:text-4xl font-bold mb-6">Ledger & Professional Reports</h3>
+                    <p class="opacity-50 text-base mb-8 leading-relaxed">Professional-grade ledger and double-entry bookkeeping. Generate A4 PDF reports for tax filings, profit audits, and supplier settlements on the Windows platform.</p>
+                </div>
+                <div class="lg:w-1/2 mockup-desktop">
+                    <img src="screenshots/desktop/ledger.jpg" alt="Ledger Desktop" class="w-full">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT / DEMO BOOKING -->
+    <section id="contact" class="py-24 px-6 bg-surface-dark/40">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-head text-4xl lg:text-5xl font-black mb-8">Ready to <span class="text-primary">Transform?</span></h2>
+            <p class="text-lg opacity-60 mb-12">Book a free live demo or contact our sales team to claim your lifetime license.</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="https://wa.me/923000000000" class="flex items-center gap-6 p-8 glass rounded-3xl hover:border-primary transition-all text-left">
+                    <div class="w-14 h-14 bg-green-500/20 text-green-500 rounded-2xl flex items-center justify-center"><i data-lucide="message-circle" class="w-8 h-8"></i></div>
+                    <div>
+                        <h4 class="font-bold text-xl mb-1">WhatsApp Sales</h4>
+                        <p class="text-xs opacity-40">Instant reply for pricing & demo</p>
+                    </div>
+                </a>
+                <a href="mailto:sales@matechmatrix.com" class="flex items-center gap-6 p-8 glass rounded-3xl hover:border-primary transition-all text-left">
+                    <div class="w-14 h-14 bg-primary/20 text-primary rounded-2xl flex items-center justify-center"><i data-lucide="mail" class="w-8 h-8"></i></div>
+                    <div>
+                        <h4 class="font-bold text-xl mb-1">Email Inquiry</h4>
+                        <p class="text-xs opacity-40">Get a formal proposal</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-12 p-10 glass rounded-[3rem] border-primary/20">
+                <h4 class="font-head text-2xl font-bold mb-6 text-primary">Live Demo Station</h4>
+                <p class="text-sm opacity-50 mb-8">We can provide a remote screen-share demo to show you every module in action before you buy.</p>
+                <button class="bg-white text-surface-darker font-black px-10 py-4 rounded-xl hover:bg-primary hover:text-white transition-all shadow-xl">
+                    Request Screen-Share Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-10">
+            <div class="glass p-10 rounded-[2.5rem]" data-aos="fade-up">
+                <p class="text-lg opacity-60 italic mb-8">"BC committee management manual registers mein asaan nahi thi. Ab ShopFlow ne transparent kar di hai. One-time fee is the best part."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center font-bold text-primary">MS</div>
+                    <div class="text-xs"><strong>Salman Khan</strong><br><span class="opacity-40">Karachi</span></div>
+                </div>
+            </div>
+            <div class="glass p-10 rounded-[2.5rem]" data-aos="fade-up" data-aos-delay="100">
+                <p class="text-lg opacity-60 italic mb-8">"IMEI tracking world-class hai. Theft risk khatam ho jata hai aur stock audit sirf 5 minute mein mobile se ho jata hai."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center font-bold text-secondary">AR</div>
+                    <div class="text-xs"><strong>Ahmed Raza</strong><br><span class="opacity-40">Lahore</span></div>
+                </div>
+            </div>
+            <div class="glass p-10 rounded-[2.5rem]" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-lg opacity-60 italic mb-8">"Repair job cards aur spare parts billing POS ke sath integrated hai, jo kahin aur nahi milti. Pakistan ke mobile retailers ke liye perfect hai."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 bg-success/20 rounded-full flex items-center justify-center font-bold text-success">FK</div>
+                    <div class="text-xs"><strong>Faisal Khan</strong><br><span class="opacity-40">Islamabad</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="legal" class="py-20 px-6 bg-surface-darker border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-16 mb-16">
+            <div class="lg:w-1/3">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center rotate-6"><i data-lucide="layout-dashboard" class="text-white w-4 h-4"></i></div>
+                    <span class="font-head font-extrabold text-xl tracking-tighter">ShopFlow<span class="text-primary">POS</span></span>
+                </div>
+                <p class="opacity-40 text-sm leading-relaxed mb-8">Pakistan's most advanced retail technology for mobile shops. Built for speed, accuracy, and lifetime ownership. </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center hover:text-primary transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center hover:text-primary transition"><i data-lucide="github" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-12 lg:w-2/3">
+                <div>
+                    <h5 class="font-bold text-xs uppercase tracking-widest text-primary mb-6">Product</h5>
+                    <ul class="space-y-3 text-sm opacity-50">
+                        <li><a href="#hero" class="hover:text-primary transition">Home</a></li>
+                        <li><a href="#features-grid" class="hover:text-primary transition">Modules</a></li>
+                        <li><a href="#pricing" class="hover:text-primary transition">Lifetime Buy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-xs uppercase tracking-widest text-primary mb-6">Legal</h5>
+                    <ul class="space-y-3 text-sm opacity-50">
+                        <li><a href="privacy.html" class="hover:text-primary transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-primary transition">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-xs uppercase tracking-widest text-primary mb-6">Support</h5>
+                    <ul class="space-y-3 text-sm opacity-50">
+                        <li><a href="#contact" class="hover:text-primary transition">WhatsApp Support</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Live Training</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col md:row justify-between items-center gap-6 text-[10px] opacity-20">
+            <p>© 2025 Matech Matrix. All rights reserved. Designed for Excellence.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        AOS.init({ duration: 1000, once: true });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (nav) {
+                if (window.scrollY > 40) {
+                    nav.querySelector('.glass').classList.add('scale-95', 'opacity-90', 'backdrop-blur-xl');
+                } else {
+                    nav.querySelector('.glass').classList.remove('scale-95', 'opacity-90', 'backdrop-blur-xl');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
